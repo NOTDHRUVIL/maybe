@@ -7,125 +7,124 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    /* Pochacco-inspired background - light blue/green gradient */
-    background: linear-gradient(135deg, #a1e0e0 0%, #d4f0f0 100%);
+    /* === Reverted to V1 Background === */
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
     color: #333;
     line-height: 1.6;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    overflow-x: hidden;
-    /* Optional: Subtle Pochacco pattern background */
-    /* background-image: url('pochacco-pattern.png');
-    background-repeat: repeat;
-    background-size: 150px; */
+    display: flex; /* Kept from V2 for layout */
+    flex-direction: column; /* Kept from V2 */
+    min-height: 100vh; /* Kept from V2 */
+    overflow-x: hidden; /* Kept from V2 */
 }
 
 /* Header/Hero Section */
 .hero {
     text-align: center;
     padding: 40px 20px 30px;
-    background: rgba(255, 255, 255, 0.6); /* Slightly more opaque white */
+    /* === V1 Header Background Style === */
+    background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(5px);
-    border-bottom: 3px solid #f5a623; /* Pochacco's yellow/orange */
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5); /* Subtle V1 border */
     margin-bottom: 30px;
-    position: relative;
+    position: relative; /* Kept for potential future absolute elements */
 }
 
+/* Pochacco Image Styling (Kept from V2) */
 .pochacco-img {
-    max-width: 120px; /* Adjust size as needed */
+    max-width: 110px; /* Adjusted size slightly */
     height: auto;
     margin-bottom: 15px;
-    border-radius: 50%; /* Make it circular */
+    border-radius: 50%;
     border: 3px solid #ffffff;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* === Reverted to V1 Header Font Styles === */
 .hero h1 {
     font-family: 'Pacifico', cursive;
-    font-size: 2.8rem; /* Slightly smaller */
-    color: #e63946; /* Pochacco's red */
+    font-size: 3rem; /* Adjusted size */
+    color: #e94057; /* V1 Pink/Red */
     margin-bottom: 0;
     line-height: 1.2;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .hero .friend-name {
     font-family: 'Pacifico', cursive;
-    font-size: 4rem; /* Slightly smaller */
-    color: #457b9d; /* Pochacco's blue */
+    font-size: 4rem; /* Adjusted size */
+    color: #f27121; /* V1 Orange */
     margin-top: -5px;
     margin-bottom: 15px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .hero .intro-message {
     font-size: 1.1rem;
-    color: #555;
+    color: #555; /* Kept consistent dark grey */
     max-width: 600px;
     margin: 0 auto;
 }
 
-/* Card Viewer Area */
+/* Card Viewer Area (Kept from V2 for structure) */
 .card-viewer {
-    flex-grow: 1; /* Takes up remaining vertical space */
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* Center card vertically */
+    justify-content: center;
     padding: 20px;
 }
 
-/* Single Wish Card Display */
+/* Single Wish Card Display - Styled like V1 cards */
 #card-display-area {
-    background-color: #ffffff;
-    border-radius: 15px;
-    padding: 30px 35px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    background-color: #ffffff; /* V1 Card background */
+    border-radius: 12px; /* V1 Card border radius */
+    padding: 25px 30px; /* Adjusted padding */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* V1 Card shadow */
     width: 90%;
-    max-width: 550px; /* Max width for the card */
-    min-height: 200px; /* Ensure minimum height */
+    max-width: 550px;
+    min-height: 200px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Push sender to bottom */
-    border: 3px solid #f5a623; /* Yellow border */
+    justify-content: space-between;
+    /* Removed V2 yellow border */
     margin-bottom: 25px;
-    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out; /* Kept V2 transition */
     opacity: 1;
     transform: scale(1);
 }
 
-/* Animation class for card transitions */
+/* Kept V2 animation class */
 #card-display-area.fade-out {
     opacity: 0;
     transform: scale(0.95);
 }
 
 #card-display-area .message {
-    font-size: 1.1rem; /* Slightly larger text */
+    font-size: 1.05rem; /* Adjusted size */
     margin-bottom: 20px;
     color: #444;
     font-style: italic;
-    text-align: center; /* Center message text */
-    flex-grow: 1; /* Allow message to take space */
+    text-align: center;
+    flex-grow: 1;
 }
 
 #card-display-area .sender {
-    font-size: 1rem; /* Slightly larger */
+    font-size: 0.95rem; /* Adjusted size */
     font-weight: 700;
-    color: #e63946; /* Red sender name */
+    color: #e94057; /* V1 Pink/Red sender color */
     text-align: right;
-    margin-top: 15px; /* Add space above sender */
+    margin-top: 15px;
 }
 
-/* Navigation Buttons */
+/* Navigation Buttons - Styled with V1 colors */
 #card-navigation {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px; /* Space between buttons */
+    gap: 15px;
     margin-bottom: 10px;
-    flex-wrap: wrap; /* Allow buttons to wrap on small screens */
+    flex-wrap: wrap;
 }
 
 .nav-button {
@@ -133,16 +132,16 @@ body {
     font-size: 1rem;
     font-weight: 700;
     border: none;
-    border-radius: 25px; /* Rounded buttons */
+    border-radius: 25px; /* Kept V2 rounded shape */
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    background-color: #457b9d; /* Blue */
+    background-color: #e94057; /* V1 Pink/Red for default buttons */
     color: white;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 
 .nav-button:hover {
-    background-color: #3a6a8a; /* Darker blue */
+    background-color: #d13047; /* Darker pink/red */
     transform: translateY(-2px);
 }
 
@@ -151,13 +150,13 @@ body {
 }
 
 .nav-button.random {
-    background-color: #e63946; /* Red for random button */
+    background-color: #f27121; /* V1 Orange for random button */
 }
 .nav-button.random:hover {
-    background-color: #c42d3a; /* Darker red */
+    background-color: #da6014; /* Darker orange */
 }
 
-/* Wish Counter */
+/* Wish Counter (Kept from V2) */
 .wish-counter {
     font-size: 0.9rem;
     color: #555;
@@ -166,18 +165,18 @@ body {
 }
 
 
-/* Footer */
+/* Footer - Styled like V1 */
 footer {
     text-align: center;
-    padding: 20px 20px;
+    padding: 25px 20px; /* Adjusted padding */
     margin-top: 30px;
-    background: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.2); /* V1 Footer Background */
     color: #555;
     font-size: 0.9rem;
-    border-top: 3px solid #f5a623; /* Yellow top border */
+    /* Removed V2 yellow border */
 }
 
+/* Music Control (Kept Structure from V2) */
 .music-control {
     margin-bottom: 15px;
     display: flex;
@@ -189,14 +188,15 @@ footer {
 .music-control p {
     margin: 0;
     font-weight: bold;
-    color: #457b9d;
+    color: #e94057; /* V1 Pink/Red for text */
 }
 
+/* Play Button - Styled with V1 color */
 #play-pause-btn {
-    background-color: #f5a623; /* Yellow */
+    background-color: #f27121; /* V1 Orange */
     color: white;
     border: none;
-    border-radius: 50%; /* Circle button */
+    border-radius: 50%;
     width: 40px;
     height: 40px;
     font-size: 1.2rem;
@@ -205,18 +205,18 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    line-height: 1; /* Ensure icon is centered */
+    line-height: 1;
 }
 
 #play-pause-btn:hover {
-    background-color: #e0930e;
+    background-color: #da6014; /* Darker Orange */
     transform: scale(1.1);
 }
 
-/* Responsive Adjustments */
+/* Responsive Adjustments (Combined and tweaked from V1/V2) */
 @media (max-width: 768px) {
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 2.6rem;
     }
     .hero .friend-name {
         font-size: 3.5rem;
@@ -225,7 +225,7 @@ footer {
         max-width: 100px;
     }
     #card-display-area {
-        padding: 25px 20px;
+        padding: 20px 25px;
         min-height: 180px;
     }
     #card-display-area .message {
@@ -238,7 +238,7 @@ footer {
 
 @media (max-width: 480px) {
      .hero h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
     .hero .friend-name {
         font-size: 2.8rem;
@@ -259,5 +259,8 @@ footer {
     .music-control {
         flex-direction: column;
         gap: 5px;
+    }
+    #card-display-area {
+        padding: 15px 20px;
     }
 }
