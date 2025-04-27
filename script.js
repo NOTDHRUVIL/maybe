@@ -47,6 +47,8 @@ Sanay: hey happy birthday mayble, have a fun day today and remember cardiff bay 
 Vinti: Happiest birthday Maybelle..hope you have the best day and year ahead thank you for being the wonderful person and friend that you are love you❤️
 Lyla: Hey Maybelle, I used to think being kind and fun was something we had to work hard to achieve, but you seem to have been born with it. I guess a lot of people must feel as lucky as I do to have you in their lives. Happy birthday! I hope all the wonderful things you deserve will find their way to you in your new year — so get excited! Love from Lyla
 Kana: Dear Maybelle, Happy Birthday!! Hope you have an amazing year :) Love you so much girll 💕 From Kanana
+Lou: - i've only known you for a few months but ive never partied harder in cardiff! have a wonderful birthday
+Ravya: Halo selamat ulang tahun maybelle, ini sangat tanpa rencana lol, saya sudah lama belom bicara dengan anda, saya tidak tahu kamu lagi ngapain, tidak tahu kamu dimana, tapi semoga Suatu hari kita bisa bertemu lol, Selamat Ulang Tahun dan semoga kamu bersenang-senang, saya meminta teman indonesiaku untuk membantuku menerjemahkan ini ke bahasa indonesia, tidak memakai google translate.
 Dhruvil: Maybelle I don’t know what to say. It's already been three years since we first met and it seems like time is not being lenient to us hahaha. You are the most insightful, thoughtful, genuine, brainy, gritty, perfectly imperfect person that I could ever ask for a bestie. Thank you so much for being there for me and having me around all this time, in person and online. I could not say anything commensurate with the love you have given me and have shown me the extent of love I could have for a friend which I did not think was possible. However tough times may seem, I know you will always end up doing something extraordinary, and I have known you enough to have the proof to back that up. Keep taking care of yourself, and “I love you, you idiot!” Happy birthday
     `;
 
@@ -165,15 +167,15 @@ Dhruvil: Maybelle I don’t know what to say. It's already been three years sinc
     function toggleMusic() {
         if (isMusicPlaying) {
             backgroundMusic.pause();
-            playPauseButton.textContent = '▶️ Play';
+            playPauseButton.textContent = '▶️';
         } else {
             // Try to play, handle potential browser block
             backgroundMusic.play().then(() => {
-                playPauseButton.textContent = '⏸️ Pause';
+                playPauseButton.textContent = '⏸️';
             }).catch(error => {
                 console.warn("Audio autoplay might be blocked by the browser. User interaction needed.", error);
                 // Optionally inform the user they need to click play
-                playPauseButton.textContent = '▶️ Play';
+                playPauseButton.textContent = '▶️';
                 isMusicPlaying = false; // Ensure state is correct if play failed
                 return; // Exit if play failed
             });
@@ -183,7 +185,7 @@ Dhruvil: Maybelle I don’t know what to say. It's already been three years sinc
 
      // Update button text if music ends naturally (though it's looping)
      backgroundMusic.addEventListener('ended', () => {
-        playPauseButton.textContent = '▶️ Play';
+        playPauseButton.textContent = '▶️';
         isMusicPlaying = false;
      });
 
